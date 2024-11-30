@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends 'menu.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+    {% block pagename %}
+        <h1>{{ text }}</h1>
+    {% endblock %}
+
+    {% block menu %}
+        {{ block.super }}
+    {% endblock %}
+
+    {% block content %}
+        <h1>Извините, Ваша корзина пуста</h1>
+        <form action="http://127.0.0.1:8000" target="_self"><button class="btn">Вернуться обратно</button> </form>
+    {% endblock %}
+</body>
+</html>
